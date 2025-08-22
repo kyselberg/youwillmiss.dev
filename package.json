@@ -11,6 +11,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.12",
     "@types/html-minifier-terser": "^7.0.2",
+    "daisyui": "^5.0.50",
     "html-minifier-terser": "^7.2.0",
     "tailwindcss": "^4.1.12",
     "typescript": "~5.8.3",

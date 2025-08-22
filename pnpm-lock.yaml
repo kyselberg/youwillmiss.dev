@@ -14,6 +14,9 @@ importers:
       '@types/html-minifier-terser':
         specifier: ^7.0.2
         version: 7.0.2
+      daisyui:
+        specifier: ^5.0.50
+        version: 5.0.50
       html-minifier-terser:
         specifier: ^7.2.0
         version: 7.2.0
@@ -429,6 +432,9 @@ packages:
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+
+  daisyui@5.0.50:
+    resolution: {integrity: sha512-c1PweK5RI1C76q58FKvbS4jzgyNJSP6CGTQ+KkZYzADdJoERnOxFoeLfDHmQgxLpjEzlYhFMXCeodQNLCC9bow==}
 
   detect-libc@2.0.4:
     resolution: {integrity: sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==}
@@ -937,6 +943,8 @@ snapshots:
   commander@10.0.1: {}
 
   commander@2.20.3: {}
+
+  daisyui@5.0.50: {}
 
   detect-libc@2.0.4: {}
 
