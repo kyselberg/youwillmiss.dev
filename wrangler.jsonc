@@ -1,7 +1,13 @@
 {
     "name": "youwillmissdotdev",
     "compatibility_date": "2025-08-22",
+    "routes": [
+        {
+            "pattern": "youwillmiss.dev/*",
+            "zone_name": "youwillmiss.dev"
+        }
+    ],
     "assets": {
-      "directory": "./dist"
+        "directory": "./dist"
     }
-  }
+}
