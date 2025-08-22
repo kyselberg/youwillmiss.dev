@@ -15,79 +15,115 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="/src/style.css" rel="stylesheet">
   <script defer type="module" src="./src/main.ts"></script>
+  <style>
+    [data-theme="light"] .sun-icon {
+      display: block;
+    }
+    [data-theme="light"] .moon-icon {
+      display: none;
+    }
+    [data-theme="dark"] .sun-icon {
+      display: none;
+    }
+    [data-theme="dark"] .moon-icon {
+      display: block;
+    }
+  </style>
 </head>
 
-<body>
-  <header>
-    <div class="header-content">
-      <div>
-        <h1>Illia Kyselov</h1>
-        <p>Frontend Developer • Aspiring Software Engineer</p>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased">
+  <header class="border-b border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-6 py-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Illia Kyselov</h1>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Frontend Developer • Aspiring Software Engineer</p>
+        </div>
+        <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all" aria-label="Toggle theme">
+          <svg class="sun-icon w-5 h-5 text-gray-600 dark:text-gray-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon w-5 h-5 text-gray-600 dark:text-gray-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
       </div>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
     </div>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I'm Illia Kyselov, a frontend developer with 5+ years of experience building modern web applications.
-        I specialize in <strong>Vue.js, Nuxt.js, Tailwind CSS, and TypeScript</strong>, and I'm expanding into backend
-        technologies such as <strong>Node.js, NestJS, and SQL databases</strong>.
-      </p>
-      <p>
-        My goal is to grow into a versatile software engineer, combining strong technical expertise with
-        product thinking and scalable architectures.
-      </p>
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <section id="about" class="mb-16">
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">About Me</h2>
+      <div class="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p>
+          I'm Illia Kyselov, a frontend developer with 5+ years of experience building modern web applications.
+          I specialize in <strong class="font-semibold text-gray-900 dark:text-white">Vue.js, Nuxt.js, Tailwind CSS, and TypeScript</strong>, and I'm expanding into backend
+          technologies such as <strong class="font-semibold text-gray-900 dark:text-white">Node.js, NestJS, and SQL databases</strong>.
+        </p>
+        <p>
+          My goal is to grow into a versatile software engineer, combining strong technical expertise with
+          product thinking and scalable architectures.
+        </p>
+      </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills & Technologies</h2>
-      <ul>
-        <li>Frontend: Vue.js, Nuxt.js, React, Tailwind CSS</li>
-        <li>Backend: Node.js, NestJS, Express, REST & GraphQL APIs</li>
-        <li>Databases: PostgreSQL, MySQL, Redis</li>
-        <li>DevOps: Docker, Nginx, CI/CD (GitHub Actions)</li>
+    <section id="skills" class="mb-16">
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Skills & Technologies</h2>
+      <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+        <li class="flex items-start">
+          <span class="text-gray-500 dark:text-gray-400 mr-3">•</span>
+          <span><strong class="font-medium text-gray-900 dark:text-white">Frontend:</strong> Vue.js, Nuxt.js, React, Tailwind CSS</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gray-500 dark:text-gray-400 mr-3">•</span>
+          <span><strong class="font-medium text-gray-900 dark:text-white">Backend:</strong> Node.js, NestJS, Express, REST & GraphQL APIs</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gray-500 dark:text-gray-400 mr-3">•</span>
+          <span><strong class="font-medium text-gray-900 dark:text-white">Databases:</strong> PostgreSQL, MySQL, Redis</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-gray-500 dark:text-gray-400 mr-3">•</span>
+          <span><strong class="font-medium text-gray-900 dark:text-white">DevOps:</strong> Docker, Nginx, CI/CD (GitHub Actions)</span>
+        </li>
       </ul>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>
-        I've worked on projects ranging from SEO-optimized web apps to scalable SaaS solutions.
-        Currently, I'm building a <strong>university admission tracking platform</strong> that scrapes, analyzes,
-        and visualizes data to help students make informed decisions.
-      </p>
+    <section id="projects" class="mb-16">
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Projects</h2>
+      <div class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p>
+          I've worked on projects ranging from SEO-optimized web apps to scalable SaaS solutions.
+          Currently, I'm building a <strong class="font-semibold text-gray-900 dark:text-white">university admission tracking platform</strong> that scrapes, analyzes,
+          and visualizes data to help students make informed decisions.
+        </p>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:doncerber@gmail.com">doncerber@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/kyselberg" rel="noopener">github.com/kyselberg</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/illiakyselov" rel="noopener">linkedin.com/in/illiakyselov</a></p>
+    <section id="contact" class="mb-16">
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Contact</h2>
+      <div class="space-y-3 text-gray-700 dark:text-gray-300">
+        <p>Email: <a href="mailto:doncerber@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline transition-colors">doncerber@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/kyselberg" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline transition-colors">github.com/kyselberg</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/illiakyselov" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline transition-colors">linkedin.com/in/illiakyselov</a></p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Illia Kyselov. All rights reserved.</p>
+  <footer class="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+    <div class="max-w-4xl mx-auto px-6 py-8">
+      <p class="text-center text-gray-600 dark:text-gray-400 text-sm">&copy; 2025 Illia Kyselov. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 
